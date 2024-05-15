@@ -3,31 +3,37 @@ import CategoryItem from './category-item'
 
 const category = [
     {
-        label: 'All'
+        label: 'All',
+        href: ''
     },
     {
-        label: 'Spicy'
+        label: 'Spicy',
+        href: 'spicy'
     },
     {
-        label: 'Dressing'
+        label: 'Dressing',
+        href: 'dressing'
     },
     {
-        label: 'Sweet'
+        label: 'Sweet',
+        href: 'sweet'
     },
     {
-        label: 'Roots'
+        label: 'Roots',
+        href: 'roots'
     },
     {
-        label: 'Vegetables'
+        label: 'Vegetables',
+        href: 'vegetables'
     },
 ]
 
 const CategoryBar = () => {
     return (
-        <div className='w-full flex gap-5 overflow-x-scroll py-5'>
+        <div className='w-full flex gap-6 overflow-x-scroll no-scrollbar py-5'>
             {
                 category.map((item, index) => (
-                    <CategoryItem key={index} label={item.label} />
+                    <CategoryItem key={index} label={item.label} href={item.href} />
                 ))
             }
         </div>

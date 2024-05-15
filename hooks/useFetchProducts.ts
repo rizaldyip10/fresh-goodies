@@ -6,14 +6,16 @@ import axios from "axios";
 import { useEffect, useState } from "react"
 
 const useFetchProductList = () => {
-    const [productList, setProductList] = useState<Product[]>();
+    const [productList, setProductList] = useState<Product[]>([]);
+    const [categories, setCategories] = useState<string>();
+    
     const [loading, setLoading] = useState<boolean>(true);
     const [error, setError] = useState<unknown>(null);
 
     useEffect(() => {
         const fetchProductList = async () => {
             try {
-                const { data, status } = await axios.get(`${config.BASE_URL}/${config.endpoints.products}`)
+                const { data, status } = await axios.get(config.BASE_URL + config.endpoints.products)
                 if (status !== 200) {
                     throw new Error("Failed to fetch product list")
                 }
