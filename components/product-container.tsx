@@ -5,6 +5,7 @@ import React from 'react';
 import ProductCard from './product-card';
 import { useSearchParams } from 'next/navigation';
 import { slugToStr } from '@/lib/slugConvert';
+import ToCartBtn from './to-cart-btn';
 
 const ProductContainer = () => {
     const { productList, categories, productGroup } = useFetchProductList();
@@ -45,7 +46,6 @@ const ProductContainer = () => {
                 </div>
             </section> :
             allProductList
-        
     );
 };
 

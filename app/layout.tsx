@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar";
 import CategoryBar from "@/components/category-bar";
+import { CartProvider } from "@/context/cartProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,13 +19,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className='pt-14 px-4'>
-          <Navbar />
-          <CategoryBar />
-        </div>
-        {children}
-      </body>
+      <CartProvider>
+        <body className={inter.className}>
+          {children}
+        </body>
+      </CartProvider>
     </html>
   );
 }

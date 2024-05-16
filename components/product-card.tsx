@@ -12,7 +12,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     return (
         <div className='w-full flex flex-col p-3 bg-[#F9F8F6] rounded-md gap-4'>
             <ProductDrawer product={product} />
-            <AddButtonProduct weight={product.weight} />
+            <AddButtonProduct weight={product.weight} metadata={product.metadata} />
         </div>
     )
 }
