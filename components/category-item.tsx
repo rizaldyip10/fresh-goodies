@@ -20,8 +20,8 @@ const CategoryItem: React.FC<CategoryItemProps> = ({ label, href }) => {
     }
     
     return (
-        <div className='h-45' onClick={onClick}>
-            <h3 className='text-lg font-sf-pro-display'>{ label }</h3>
+        <div className='h-45 w-max' onClick={onClick}>
+            <h3 className='text-lg font-sf-pro-display text-nowrap'>{ label }</h3>
             <div className={cn('mt-1 h-[1px] w-full bg-black', category != href ? 'hidden' : 'block')} />
         </div>
     )

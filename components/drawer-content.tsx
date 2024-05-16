@@ -1,7 +1,6 @@
 import { Product } from '@/types/product';
 import Image from 'next/image'
 import React from 'react'
-import AddButtonProduct from './add-button-product';
 import EditTotalDrawer from './drawer-edit-total';
 import LikeBtn from './like-btn';
 import ToCartDrawer from './drawer-to-cart-btn';
@@ -43,7 +42,7 @@ const ProductDrawerContent: React.FC<ProductDrawerContentProps> = ({ product }) 
                     <div className='w-full flex items-center'>
                         <EditTotalDrawer />
                     </div>
-                    <div className='basis-[54px] flex items-center'>
+                    <div className='flex items-center'>
                         <LikeBtn />
                     </div>
                 </div>
